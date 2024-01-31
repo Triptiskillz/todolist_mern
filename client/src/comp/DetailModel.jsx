@@ -7,7 +7,7 @@ function DetailModel(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await axios.get(`http://localhost:5000/api/users/${id}`);
+        let response = await axios.get(`https://todolist-mern-iota.vercel.app/api/users/${id}`);
         let data = response.data;
         setTasks(data);
       } catch (error) {
