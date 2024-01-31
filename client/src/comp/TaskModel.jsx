@@ -11,7 +11,7 @@ function TaskModel(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await axios.get(`http://localhost:5000/api/users/${id}`);
+        let response = await axios.get(`https://todolist-mern-iota.vercel.app/api/users/${id}`);
         let data = response.data;
         setTasks(data);
       } catch (error) {
@@ -34,14 +34,14 @@ function TaskModel(props) {
     try {
       if (id == null) {
         const response = await axios.post(
-          "http://localhost:5000/api/users",
+          `https://todolist-mern-iota.vercel.app/api/users`,
           tasks
         );
         alert("Task created");
       }
       {
         const response = await axios.put(
-          `http://localhost:5000/api/users/${id}`,
+          `https://todolist-mern-iota.vercel.app/api/users/${id}`,
           tasks
         );
         alert("Task Update");
