@@ -38,7 +38,7 @@ function TaskModel(props) {
           tasks
         );
         alert("Task created");
-      }
+      }else
       {
         const response = await axios.put(
           `https://todolist-mern-iota.vercel.app/api/users/${id}`,
