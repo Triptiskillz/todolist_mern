@@ -23,7 +23,7 @@ function ListModel() {
     console.log(id);
     try {
       let response = await axios.delete(
-        `http://localhost:5000/api/users/${id}`
+        `https://todolist-mern-iota.vercel.app/api/users/${id}`
       );
       let data = response.data;
       alert("User Deleted!");
@@ -35,7 +35,7 @@ function ListModel() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await axios.get("http://localhost:5000/api/users");
+        let response = await axios.get(`https://todolist-mern-iota.vercel.app/api/users`);
         let data = response.data;
         setUsers(data);
       } catch (error) {
