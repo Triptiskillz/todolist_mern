@@ -50,7 +50,7 @@ function TaskModel(props) {
       handleClose();
     } catch (error) {
       console.error("Error creating task:", error);
-      alert("Error creating task");
+      // alert("Error creating task");
     }
   };
 
